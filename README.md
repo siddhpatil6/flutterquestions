@@ -129,3 +129,72 @@ var element = numbers.elementAt(1);
 // element: 2
 ```
 These operations allow you to manipulate and access elements in a Dart list, making it a versatile data structure for storing and working with collections of data.
+
+<h1> What is map and explain following operations of map
+isNotEmpty
+isEmpty
+length
+Keys
+values
+containsKeys
+containsValues
+remove </h1>
+
+In Dart, a Map is a collection of key-value pairs where each key is unique. Here's an explanation of the operations you mentioned:
+
+<b> isNotEmpty: </b>
+Returns true if the map is not empty (i.e., it contains at least one key-value pair); otherwise, it returns false.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.isNotEmpty); // Output: true
+```
+
+<b> isEmpty:</b> <br> Returns true if the map is empty (i.e., it does not contain any key-value pairs); otherwise, it returns false.
+```
+Map<String, int> scores = {};
+print(scores.isEmpty); // Output: true
+```
+
+<b>length:</b> <br>
+Returns the number of key-value pairs in the map.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.length); // Output: 2
+```
+
+<b>keys: </b>
+Returns an iterable containing all the keys in the map.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.keys); // Output: (Alice, Bob)
+```
+
+<b>values: </b>
+Returns an iterable containing all the values in the map.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.values); // Output: (100, 90)
+```
+
+<b>containsKey: <b> 
+Returns true if the map contains the specified key; otherwise, it returns false.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.containsKey('Alice')); // Output: true
+```
+
+<b>containsValue: </b>
+Returns true if the map contains the specified value; otherwise, it returns false.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+print(scores.containsValue(90)); // Output: true
+```
+
+<b>remove: </b>
+Removes the entry for the specified key and returns the value associated with the key, or null if the key is not found.
+```
+Map<String, int> scores = {'Alice': 100, 'Bob': 90};
+int removedScore = scores.remove('Alice');
+print(removedScore); // Output: 100
+```
+These operations allow you to manipulate and access data in a Map in Dart.
