@@ -142,14 +142,15 @@ remove </h1>
 
 In Dart, a Map is a collection of key-value pairs where each key is unique. Here's an explanation of the operations you mentioned:
 
-<b> isNotEmpty: </b>
+<b> isNotEmpty: </b> </br>
 Returns true if the map is not empty (i.e., it contains at least one key-value pair); otherwise, it returns false.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.isNotEmpty); // Output: true
 ```
 
-<b> isEmpty:</b> <br> Returns true if the map is empty (i.e., it does not contain any key-value pairs); otherwise, it returns false.
+<b> isEmpty:</b> <br> 
+Returns true if the map is empty (i.e., it does not contain any key-value pairs); otherwise, it returns false.
 ```
 Map<String, int> scores = {};
 print(scores.isEmpty); // Output: true
@@ -162,35 +163,35 @@ Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.length); // Output: 2
 ```
 
-<b>keys: </b>
+<b>keys: <b> </br>
 Returns an iterable containing all the keys in the map.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.keys); // Output: (Alice, Bob)
 ```
 
-<b>values: </b>
+<b>values: <b> </br>
 Returns an iterable containing all the values in the map.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.values); // Output: (100, 90)
 ```
 
-<b>containsKey: <b> 
+<b>containsKey: <b> </br>
 Returns true if the map contains the specified key; otherwise, it returns false.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.containsKey('Alice')); // Output: true
 ```
 
-<b>containsValue: </b>
+<b>containsValue: <b></br>
 Returns true if the map contains the specified value; otherwise, it returns false.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
 print(scores.containsValue(90)); // Output: true
 ```
 
-<b>remove: </b>
+<b>remove: <b> </br> </br>
 Removes the entry for the specified key and returns the value associated with the key, or null if the key is not found.
 ```
 Map<String, int> scores = {'Alice': 100, 'Bob': 90};
