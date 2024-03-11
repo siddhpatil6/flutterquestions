@@ -199,3 +199,43 @@ int removedScore = scores.remove('Alice');
 print(removedScore); // Output: 100
 ```
 These operations allow you to manipulate and access data in a Map in Dart.
+
+
+<h1>what is final and const?</h1> -
+In Dart, both final and const are used to declare constants, but they have some important differences:
+
+<b>final:<b> </br>
+A final variable can be assigned a value only once. Once assigned, its value cannot be changed.
+The value of a final variable is determined at runtime.
+You can declare a final variable without initializing it, but you must assign a value before accessing it.
+
+Example:
+```
+final int finalNumber = 10;
+```
+
+<b>const:<b> </br>
+A const variable is a compile-time constant. Its value is known at compile time and cannot be changed afterwards.
+You must initialize a const variable at the time of declaration.
+const is implicitly final, so it also cannot be reassigned.
+Example:
+```
+const int constNumber = 20;
+```
+
+Usage:
+Use final when you want a variable to be a constant, but its value is not known until runtime.
+Use const for variables whose values are known at compile time, such as literal values or the result of constant expressions.
+Example:
+
+```
+final name = 'John'; // final variable assigned at runtime
+const age = 30;       // const variable assigned at compile time
+
+final List<int> finalList = [1, 2, 3]; // final list can be modified
+const List<int> constList = [4, 5, 6]; // const list cannot be modified
+
+finalList.add(4); // OK
+// constList.add(7); // Error: Cannot add to a const list
+```
+In summary, use final for values that might change at runtime but should be constant within a context, and use const for values that are known at compile time and will never change.
