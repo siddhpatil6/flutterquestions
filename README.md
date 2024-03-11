@@ -22,8 +22,8 @@ value = 'Hello';    // value is now a String
 In general, it's recommended to use var when the type is clear from the initialization, and to use dynamic when you need the flexibility to change the type of the variable or when dealing with dynamic data (e.g., JSON). However, overusing dynamic can lead to less readable and maintainable code, so it's advised to use it judiciously.
 
 
-<h3> what is list in dart and what are the following operations we perform on it?
-Add, addAll, insert, insertAll, replaceRange, removeRange,length, reversed, first, last,isEmpty,isNotEmpty,elementAt </h3>
+<h1>  what is list in dart and what are the following operations we perform on it?
+Add, addAll, insert, insertAll, replaceRange, removeRange,length, reversed, first, last,isEmpty,isNotEmpty,elementAt </h1>
 
 
 In Dart, a List is an ordered collection of elements. Here are the operations you mentioned:
