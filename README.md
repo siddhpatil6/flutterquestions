@@ -239,3 +239,21 @@ finalList.add(4); // OK
 // constList.add(7); // Error: Cannot add to a const list
 ```
 In summary, use final for values that might change at runtime but should be constant within a context, and use const for values that are known at compile time and will never change.
+
+<h1>what are the type of buttons?</h1>
+
+<b>RaisedButton:</b><br>
+A material design raised button. It's typically used for important actions in your app.
+
+<b>FlatButton:</b><br>
+A material design flat button. It's used for less prominent actions in your app.
+
+<b>OutlineButton:<b><br> A material design outline button. It's similar to FlatButton but with an outlined border.
+
+<b>IconButton:<b><br> A button that contains an icon. It's useful for actions that only consist of an icon.
+
+<b>FloatingActionButton:<b><br> A circular button that floats above the content in your app. It's often used for primary actions in your app.
+
+<b>DropdownButton:<b><br> A button that displays a dropdown menu when pressed. It's used for selecting an item from a list of options.
+
+<b>PopupMenuButton:<b><br> A button that displays a popup menu when pressed. It's used for showing a list of actions or options.
