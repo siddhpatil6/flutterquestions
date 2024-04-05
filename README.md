@@ -332,5 +332,11 @@ The provider is built using widgets. You can use all the objects in the provider
 Until the async method is finished, await interrupts the process flow. Await generally means: Wait here until this function is finished so that you can get its return value. Await can only be used with async. Using this, all currently running functions are put on hold until PF nature is complete. <br>
 
 
+<h1> Write the difference between SizedBox Vs Container. ? </h1>
+<h6> Container: </h6>
+In this parent widget, multiple child widgets can be easily controlled and handled by adjusting their size, padding, and color efficiently. We can wrap a widget in a container widget if it needs any styling, like a color, a shape, or a size constraint, etc.
+
+<h6>SizedBox: </h6>
+This is a specific size box. It does not allow us to set the widget's color or decoration, unlike Container. In this case, we only need to resize the widget that is passed as a child. In other words, it forces its child widget to have a specific size. 
 
 
