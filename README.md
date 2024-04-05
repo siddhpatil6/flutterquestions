@@ -340,3 +340,10 @@ In this parent widget, multiple child widgets can be easily controlled and handl
 This is a specific size box. It does not allow us to set the widget's color or decoration, unlike Container. In this case, we only need to resize the widget that is passed as a child. In other words, it forces its child widget to have a specific size. 
 
 
+What is Scaffold ?
+What is setState in flutter?
+what are the lifecycle method of widget?
+what are overriden methods of webview?
+explain block pattern?
+
+
