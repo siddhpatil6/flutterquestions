@@ -289,4 +289,18 @@ This can be better understood by looking at the image below: <br>
 
 
 
+<h1>Write difference between Hot reload and Hot restart.</h1> <br>
+For any dart application, the initial execution requires a fair amount of time. Therefore, to solve this problem, flutter has two features: Hot Reload and Hot Restart, which reduce the execution time of our app after we run it. <br><br>
+
+Hot Reload: It is considered an excellent feature of flutter that takes approximately one second to perform its functionality.  With this function, you can make changes, fix bugs, create UIs, and add features easily and quickly. By utilizing the hot reload feature, we can quickly compile the new code in a file and send it to Dart Virtual Machine (DVM). As soon as DVM completes the update, it updates the app's UI. The preserved state is not destroyed in hot reload.<br>
+Hot Restart: It has a slightly different functionality as compared to a hot reload. In this, the preserved states of our app are destroyed, and the code gets compiled again from the beginning. Although it takes longer than a hot reload, it's faster than a full restart function.<br>
+
+<h1> Explain BuildContext.</h1> <br>
+BuildContexts are used to identify or locate widgets in widget trees. Each widget has its own BuildContext, i.e., one BuildContext per widget. Basically, we're using it to find references to other widgets and themes. In addition, you can utilize it to interact with widget parents and access widget data. <br>
+
+<h1>What is state management?</h1> <br>
+Whether you are building a mobile app or a web application, State Management is crucial. Using it, states of various UI controls are centralized to handle data flow across an application. It can be a text field, radio button, checkbox, dropdown, toggle, form, and so on. In Flutter, state management can be categorized into two types as follows:  <br>
+ <br>
+Ephemeral State: Ephemeral state is also called UI state or local state, and it pertains to a particular widget. In other words, it is a state that is contained within the specific widget. By means of StatefulWidget, Flutter provides support for this state. <br>
+App State: This is different from the ephemeral state since it is a state that we intend to share across different parts of the app and which we want to maintain between sessions. These types of states can thus be used globally. By means of scoped_model, Flutter provides support for this state.  <br>
 
