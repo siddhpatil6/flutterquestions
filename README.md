@@ -349,3 +349,4 @@ This is a specific size box. It does not allow us to set the widget's color or d
 <h1>explain why dart is singlethreaded language?</h1>
 <h1>what is websocket?</h1>
 <h1>what is block pattern?</h1>
+<h1>what is difference between package and plugin ?</h1>
