@@ -273,7 +273,8 @@ mainAxisAlignment = Horizontal Axis  <br>
 crossAxisAlignment = Vertical Axis  <br>
 <br>
 This can be better understood by looking at the image below: <br>
-![](https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/001/062/original/Row.jpg)
+
+![row](https://github.com/siddhpatil6/flutterquestions/assets/5618021/096b479b-8976-4b61-b859-2b288dd417d2)
 
 <br>
 As Children of the Column Widget are arranged vertically. <br>
@@ -283,7 +284,7 @@ crossAxisAlignment = Horizontal Axis   <br>
 <br>
 This can be better understood by looking at the image below: <br>
 <br>
-![](https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/001/063/original/column.jpg)
+![column](https://github.com/siddhpatil6/flutterquestions/assets/5618021/9bdc6039-3f3c-445f-a580-6f78286b644c)
 
 
 
