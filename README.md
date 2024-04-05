@@ -312,6 +312,7 @@ Ephemeral state is also called UI state or local state, and it pertains to a par
 <h6>App State: </h6> <br>
 This is different from the ephemeral state since it is a state that we intend to share across different parts of the app and which we want to maintain between sessions. These types of states can thus be used globally. By means of scoped_model, Flutter provides support for this state. <br>
 The following diagram gives a better explanation of the differences between ephemeral and app states:<br> <br>
-![statemanage](https://github.com/siddhpatil6/flutterquestions/assets/5618021/8c41fdef-8093-4d20-bf9d-13f60b0b0eb1)
+
+![statemanage](https://github.com/siddhpatil6/flutterquestions/assets/5618021/4934bc28-d619-4660-9277-1535e581451a)
 
 
