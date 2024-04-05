@@ -305,12 +305,13 @@ Ephemeral State: Ephemeral state is also called UI state or local state, and it 
 App State: This is different from the ephemeral state since it is a state that we intend to share across different parts of the app and which we want to maintain between sessions. These types of states can thus be used globally. By means of scoped_model, Flutter provides support for this state.  <br>
 
 <h1>What is state management?</h1> <br>
-Whether you are building a mobile app or a web application, State Management is crucial. Using it, states of various UI controls are centralized to handle data flow across an application. It can be a text field, radio button, checkbox, dropdown, toggle, form, and so on. In Flutter, state management can be categorized into two types as follows: <br>
-<br>
+<p>Whether you are building a mobile app or a web application, State Management is crucial. Using it, states of various UI controls are centralized to handle data flow across an application. It can be a text field, radio button, checkbox, dropdown, toggle, form, and so on. In Flutter, state management can be categorized into two types as follows: <br>
+</p> <br>
 <h6>Ephemeral State:</h6> <br>
-Ephemeral state is also called UI state or local state, and it pertains to a particular widget. In other words, it is a state that is contained within the specific widget. By means of StatefulWidget, Flutter provides support for this state.<br>
-<h6>App State: </h6> <br>
-This is different from the ephemeral state since it is a state that we intend to share across different parts of the app and which we want to maintain between sessions. These types of states can thus be used globally. By means of scoped_model, Flutter provides support for this state. <br>
+<p> Ephemeral state is also called UI state or local state, and it pertains to a particular widget. In other words, it is a state that is contained within the specific widget. By means of StatefulWidget, Flutter provides support for this state. </p> <br>
+<h6>App State: </h6> <br> <br>
+
+<p>This is different from the ephemeral state since it is a state that we intend to share across different parts of the app and which we want to maintain between sessions. These types of states can thus be used globally. By means of scoped_model, Flutter provides support for this state.</p> <br>
 The following diagram gives a better explanation of the differences between ephemeral and app states:<br> <br>
 
 ![statemanage](https://github.com/siddhpatil6/flutterquestions/assets/5618021/4934bc28-d619-4660-9277-1535e581451a)
