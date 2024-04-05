@@ -345,5 +345,8 @@ What is setState in flutter?
 what are the lifecycle method of widget?
 what are overriden methods of webview?
 explain block pattern?
+what is isolate?
+explain why dart is singlethreaded language?
+
 
 
