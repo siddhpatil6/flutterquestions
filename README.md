@@ -284,7 +284,8 @@ crossAxisAlignment = Horizontal Axis   <br>
 <br>
 This can be better understood by looking at the image below: <br>
 <br>
-![column](https://github.com/siddhpatil6/flutterquestions/assets/5618021/9bdc6039-3f3c-445f-a580-6f78286b644c)
+
+![column](https://github.com/siddhpatil6/flutterquestions/assets/5618021/ddcbafbb-a1d9-46c0-ad70-0ace4d16eb90)
 
 
 
