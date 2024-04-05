@@ -257,3 +257,9 @@ A material design flat button. It's used for less prominent actions in your app.
 <b>DropdownButton:<b><br> A button that displays a dropdown menu when pressed. It's used for selecting an item from a list of options.
 
 <b>PopupMenuButton:<b><br> A button that displays a popup menu when pressed. It's used for showing a list of actions or options.
+
+<h2> . What are the types of widgets present in flutter?</h2>
+<h6>Stateless Widget:</h6>
+A widget that does nothing is a Stateless Widget. In essence, they are static and don’t store any state.   Thus, they don't save values that may change.<br>
+<h6>Stateful Widget: </h6>
+A widget that does anything is a Stateful Widget. Stateful widgets are dynamic by nature, which means they can monitor changes and update the UI accordingly. <br>
