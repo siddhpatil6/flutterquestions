@@ -317,3 +317,14 @@ The following diagram gives a better explanation of the differences between ephe
 ![statemanage](https://github.com/siddhpatil6/flutterquestions/assets/5618021/4934bc28-d619-4660-9277-1535e581451a)
 
 
+<h1>Explain pubspec.yaml file.? </h1>
+<p> The pubspec.yaml file, also known as 'pubspec', is a file that is included when you create a Flutter project and is located at the top of the project tree. This file contains information about the dependencies like packages and their versions, fonts, etc., that a project requires. It makes sure that the next time you build the project, you will get the same package version. Additionally, you can set constraints for the app. During working with the Flutter project, this configuration file of the project will be required a lot. This specification is written in YAML, which can be read by humans.  </p>
+
+<h6>The following are included in this file: </h6>
+ <br>
+General project settings, like name of the project, version, description, etc.<br>
+Dependencies within a project.<br>
+The assets of the project (e.g., images, audio, etc.).<br>
+
+
+
