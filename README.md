@@ -263,3 +263,28 @@ A material design flat button. It's used for less prominent actions in your app.
 A widget that does nothing is a Stateless Widget. In essence, they are static and don’t store any state.   Thus, they don't save values that may change.<br>
 <h6>Stateful Widget: </h6>
 A widget that does anything is a Stateful Widget. Stateful widgets are dynamic by nature, which means they can monitor changes and update the UI accordingly. <br>
+
+<h6>When to use mainAxisAlignment and crossAxisAlignment </h6>
+The mainAxisAlignment is how items are aligned on that axis, whereas crossAxisAlignment is how items are aligned on the other axis. Row and column widgets can align their children according to our preferences using the crossAxisAlignment and the mainAxisAlignment properties. <br>
+<br>
+As Children of the Row Widget are arranged horizontally.<br>
+For Row:  <br>
+mainAxisAlignment = Horizontal Axis  <br>
+crossAxisAlignment = Vertical Axis  <br>
+<br>
+This can be better understood by looking at the image below: <br>
+![](https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/001/062/original/Row.jpg)
+
+<br>
+As Children of the Column Widget are arranged vertically. <br>
+For Column:  <br>
+mainAxisAlignment = Vertical Axis  <br>
+crossAxisAlignment = Horizontal Axis   <br>
+<br>
+This can be better understood by looking at the image below: <br>
+<br>
+![](https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/001/063/original/column.jpg)
+
+
+
+
