@@ -325,5 +325,12 @@ General project settings, like name of the project, version, description, etc.<b
 Dependencies within a project.<br>
 The assets of the project (e.g., images, audio, etc.).<br>
 
+<h1>Explain Flutter Provider.</h1>
+The provider is built using widgets. You can use all the objects in the provider as if they were just part of Flutter with the new widget subclasses it creates. This also means that the provider is not cross-platform. The provider is the simplest way to handle state management. Basically, it works on the concept of PUB-SUB i.e., there is one provider and several subscribers.<br>
+
+<h1>What is await in Flutter? Write it's usage.</h1>
+Until the async method is finished, await interrupts the process flow. Await generally means: Wait here until this function is finished so that you can get its return value. Await can only be used with async. Using this, all currently running functions are put on hold until PF nature is complete. <br>
+
+
 
 
