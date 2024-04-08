@@ -339,6 +339,178 @@ In this parent widget, multiple child widgets can be easily controlled and handl
 <h6>SizedBox: </h6>
 This is a specific size box. It does not allow us to set the widget's color or decoration, unlike Container. In this case, we only need to resize the widget that is passed as a child. In other words, it forces its child widget to have a specific size. 
 
+<h1>What are Widget Lifecycle Methods: </h1>
+<h6>The widget lifecycle is a sequence of events that occur when a widget is created, updated, or destroyed. Understanding the widget lifecycle is important for writing efficient Flutter applications. </h6> <br>
+
+```
+createState()
+initState()
+didChangeDependencies()
+build()
+didUpdateWidget()
+setState()
+deactivate()
+dispose()
+```
+<h4> createState(): </h4> <br>
+<h6> This method creates the state object for the widget. When we create a stateful widget, our framework calls a createState() method and it must be overridden. </h6> <br>
+
+```
+class MyPage extends StatefulWidget {
+  @override
+  _MyPageState createState() => _MyScreenState();
+}
+```
+
+<h4>initState():</h4> <br>
+<h6>This method is called after the state object is created. It is used to initialise the state of the widget. </h6> <br>
+
+```
+late int _counter;
+@override
+void initState() {
+  print("initState");
+  _counter = 0;
+  super.initState();
+}
+```
+
+<h4>build():</h4> <br>
+<h6>his method is called after the state object is initialised. It is used to build the widget tree. This gets called each time the widget is rebuilt this can happen after initState, didChangeDependencies, didUpdateWidget, or when the state is changed via a call to setState. </h6>T<br>
+
+```
+@override
+  Widget build(BuildContext context) {
+    print("build");
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Lifecycle Demo"),
+      ),
+      body: Container(
+          child: Column(
+        children: [
+          Text(_counter.toString()),
+          ElevatedButton(onPressed: _increment, child: const Text("Increment"))
+        ],
+      )),
+    );
+  }
+```
+
+<h4>didChangeDependencies():</h4> <br>
+<h6>This method is called immediately after initState and when dependency of the State object changes via InheritedWidge. </h6> <br>
+
+```
+@override
+  void didChangeDependencies() {
+    print("didChangeDependencies");
+    super.didChangeDependencies();
+  }
+```
+
+<h4>didUpdateWidget(): </h4> <br>
+<h6>This method is called when the widget is updated with new properties. A typical case is when a parent passes some variable to the children() widget via the constructor. </h6><br>
+
+```
+@override
+  void didUpdateWidget(covariant MyPage oldWidget) {
+    print("didUpdateWidget");
+    super.didUpdateWidget(oldWidget);
+  }
+```
+
+<h4>deactivate():</h4> <br>
+This method is invoked whenState is removed from subtree A and reinserted to subtree B with the use of a GlobalKey. <br>
+
+```
+@override
+  void deactivate() {
+    print("deactivate");
+    super.deactivate();
+  }
+```
+
+<h4>dispose():</h4> <br>
+<h6>This method is called when the widget is about to be destroyed permanently. It is used to release any resources used by the widget like closing network connections or stopping animations. </h6><br>
+
+```
+@override
+  void dispose() {
+    print("dispose");
+    super.dispose();
+  }
+```
+
+<h4>Code :</h4> <br>
+
+```
+class MyPage extends StatefulWidget {
+  const MyPage({super.key});
+
+  @override
+  State<MyPage> createState() {
+    print("createState");
+    return _MyPageState();
+  }
+}
+
+class _MyPageState extends State<MyPage> {
+  void _increment() {
+    setState(() {
+      _counter = _counter + 1;
+    });
+  }
+
+  late int _counter;
+  @override
+  void initState() {
+    print("initState");
+    _counter = 0;
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    print("didChangeDependencies");
+    super.didChangeDependencies();
+  }
+
+  @override
+  void didUpdateWidget(covariant MyPage oldWidget) {
+    print("didUpdateWidget");
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void dispose() {
+    print("dispose");
+    super.dispose();
+  }
+
+  @override
+  void deactivate() {
+    print("deactivate");
+    super.deactivate();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print("build");
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Lifecycle Demo"),
+      ),
+      body: Container(
+          child: Column(
+        children: [
+          Text(_counter.toString()),
+          ElevatedButton(onPressed: _increment, child: const Text("Increment"))
+        ],
+      )),
+    );
+  }
+}
+```
 
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
