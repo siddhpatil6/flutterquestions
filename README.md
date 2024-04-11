@@ -514,6 +514,7 @@ class _MyPageState extends State<MyPage> {
 
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
+<p>the setState() function notifies the framework that the internal state of this object has changed. </p>
 <h1>what are the lifecycle method of widget? </h1>
 <h1>what are overriden methods of webview?</h1>
 <h1>explain block pattern?</h1>
