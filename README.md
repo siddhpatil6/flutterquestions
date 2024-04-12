@@ -566,7 +566,7 @@ These are the basic types, but Flutter provides a wide range of widgets that can
 provider
 
 <h1> how we handle callback in flutter </h1>
-r, you can handle callbacks by defining callback functions and passing them as parameters to child widgets. Here's a basic example to demonstrate how callbacks work:
+you can handle callbacks by defining callback functions and passing them as parameters to child widgets. Here's a basic example to demonstrate how callbacks work:
 
 ```
 import 'package:flutter/material.dart';
