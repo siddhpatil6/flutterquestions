@@ -763,19 +763,19 @@ In this example, runApp() is commented out, so the app won't start, and the UI d
 
 <h1>what is isolate?</h1>
  
-In Flutter, an isolate is a separate thread of execution that runs concurrently with the main thread (also known as the UI thread). Isolates are used to perform computations or tasks in the background without blocking the main thread, which keeps the UI responsive.
+In Flutter, an isolate is a separate thread of execution that runs concurrently with the main thread (also known as the UI thread). Isolates are used to perform computations or tasks in the background without blocking the main thread, which keeps the UI responsive.  </br>
 
-Here are some key points about isolates in Flutter:
+<b>Here are some key points about isolates in Flutter: </b> </br>
 
-Isolates are Dart's model for multithreading: Dart uses isolates to achieve concurrency, allowing multiple isolates to run simultaneously. Each isolate has its own memory heap, so they don't share memory.
+<b>Isolates are Dart's model for multithreading:</b> </br> Dart uses isolates to achieve concurrency, allowing multiple isolates to run simultaneously. Each isolate has its own memory heap, so they don't share memory.
 
-Main isolate: When you run a Flutter app, it starts with the main isolate, which is responsible for running the app's UI and handling user interactions.
+<b>Main isolate:</b> </br> When you run a Flutter app, it starts with the main isolate, which is responsible for running the app's UI and handling user interactions.
 
-Additional isolates: You can create additional isolates to perform background tasks, such as complex computations, file I/O, or network requests. These isolates run independently of the main isolate.
+<b>Additional isolates:</b> </br> You can create additional isolates to perform background tasks, such as complex computations, file I/O, or network requests. These isolates run independently of the main isolate.
 
-Communication between isolates: Isolates communicate with each other using message passing. Dart provides APIs for sending and receiving messages between isolates.
+<b>Communication between isolates:</b> </br> Isolates communicate with each other using message passing. Dart provides APIs for sending and receiving messages between isolates.
 
-Isolates in Flutter plugins: Flutter plugins often use isolates to perform platform-specific tasks, such as accessing native APIs or handling platform-specific functionality.
+<b>Isolates in Flutter plugins:</b> </br> Flutter plugins often use isolates to perform platform-specific tasks, such as accessing native APIs or handling platform-specific functionality.
 
 Here's a basic example of how you might create and use an isolate in Flutter:
 
