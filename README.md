@@ -510,7 +510,152 @@ class _MyPageState extends State<MyPage> {
     );
   }
 }
+
+<h1> what are the type of widgets? </h1>
 ```
+<h1>StatelessWidget: </h1> <br>
+Widgets that do not require mutable state. They are immutable and can't change their properties once they are built. Examples include Text, Icon, Container, etc. Here's a simple example of a StatelessWidget:
+
+```
+import 'package:flutter/material.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+      child: Text('Hello, World!'),
+    );
+  }
+}
+```
+
+<h1>StatefulWidget: </h1> <br>
+Widgets that maintain mutable state. They can change their appearance or behavior in response to events or user interactions. Examples include TextField, ListView, Checkbox, etc. Here's a simple example of a StatefulWidget:
+
+```
+import 'package:flutter/material.dart';
+
+class MyStatefulWidget extends StatefulWidget {
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  bool _isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return CheckboxListTile(
+      title: Text('Check me'),
+      value: _isChecked,
+      onChanged: (bool value) {
+        setState(() {
+          _isChecked = value;
+        });
+      },
+    );
+  }
+}
+```
+
+
+These are the basic types, but Flutter provides a wide range of widgets that can be used to build complex and beautiful user interfaces.
+
+<h1>what are the state management technique we use in flutter </h1>
+provider
+
+<h1> how we handle callback in flutter </h1>
+r, you can handle callbacks by defining callback functions and passing them as parameters to child widgets. Here's a basic example to demonstrate how callbacks work:
+
+```
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Callback Example',
+      home: MyHomePage(
+        onButtonPressed: () {
+          print('Button pressed!');
+        },
+      ),
+    );
+  }
+}
+```
+```
+class MyHomePage extends StatelessWidget {
+  final VoidCallback onButtonPressed;
+
+  MyHomePage({required this.onButtonPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Callback Example'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: onButtonPressed,
+          child: Text('Press Me'),
+        ),
+      ),
+    );
+  }
+}
+```
+In this example, MyHomePage widget takes a VoidCallback named onButtonPressed as a parameter. When the button is pressed, it calls the onPressed callback, which in turn calls the onButtonPressed callback passed from the parent widget (MyApp). This allows the parent widget to define what happens when the button is pressed.
+
+Callbacks can also pass data back to the parent widget by using functions with parameters. Here's a modified example that passes a message back to the parent widget when the button is pressed:
+
+```
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Callback Example',
+      home: MyHomePage(
+        onButtonPressed: (message) {
+          print('Button pressed with message: $message');
+        },
+      ),
+    );
+  }
+}
+```
+
+```
+class MyHomePage extends StatelessWidget {
+  final ValueChanged<String> onButtonPressed;
+
+  MyHomePage({required this.onButtonPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Callback Example'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            onButtonPressed('Hello from child!');
+          },
+          child: Text('Press Me'),
+        ),
+      ),
+    );
+  }
+}
+```
+In this example, MyHomePage widget takes a ValueChanged<String> named onButtonPressed as a parameter. When the button is pressed, it calls the onPressed callback with the message 'Hello from child!', which is then printed in the parent widget (MyApp).
 
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
