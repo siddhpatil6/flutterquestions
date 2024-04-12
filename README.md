@@ -673,6 +673,12 @@ Since stateless widgets do not have mutable state, Flutter can optimize their re
 
 Overall, the choice between stateless and stateful widgets depends on the specific requirements of your application. For components that do not need to manage state, using stateless widgets can lead to simpler, more performant, and more maintainable code.
 
+<h1>stateless widget lifecycle ?</h1>
+
+<p> Since StatelessWidgets don't have lifecycle methods like StatefulWidgets, there's no specific list to provide. In Flutter, StatefulWidget is the class that manages its state, so it's the one that includes lifecycle methods like initState(), dispose(), didUpdateWidget(), etc.</p>
+
+<p> For StatelessWidgets, the build method is called whenever the widget needs to be rendered or updated based on changes in the parent widget or other factors. This is essentially the "lifecycle" of a StatelessWidget – it's built once and then it stays the same until something causes it to be rebuilt. </p>
+
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
 <p>the setState() function notifies the framework that the internal state of this object has changed. </p>
