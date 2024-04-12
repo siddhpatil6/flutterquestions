@@ -660,16 +660,16 @@ In this example, MyHomePage widget takes a ValueChanged<String> named onButtonPr
 <h1>what are the benifit of using stateless widget over statefull widget? </h1>
 Using a stateless widget over a stateful widget in Flutter can offer several benefits:
 
-<h4>Performance: </h4> <br>
+<h4>Performance: </h4>
 Since stateless widgets do not have mutable state, Flutter can optimize their rendering process, potentially leading to better performance compared to stateful widgets.
 
-<h4>Simplicity: </h4> <br>Stateless widgets are simpler to understand and use, especially for components that do not need to manage state. They are ideal for static or unchanging UI elements.
+<h4>Simplicity: </h4> Stateless widgets are simpler to understand and use, especially for components that do not need to manage state. They are ideal for static or unchanging UI elements.
 
-<h4>Immutability:  </h4> <br> Stateless widgets promote immutability, which can lead to fewer bugs related to state management, especially in complex applications.
+<h4>Immutability:  </h4> Stateless widgets promote immutability, which can lead to fewer bugs related to state management, especially in complex applications.
 
-<h4>Reusability: </h4> <br>Stateless widgets are more reusable as they are not tied to any specific state. They can be easily shared and used in different parts of the application.
+<h4>Reusability: </h4> Stateless widgets are more reusable as they are not tied to any specific state. They can be easily shared and used in different parts of the application.
 
-<h4>Testing: </h4> <br> Stateless widgets are easier to test since they do not have internal state that needs to be manipulated or checked during testing. This can simplify the testing process and make tests more reliable.
+<h4>Testing: </h4> Stateless widgets are easier to test since they do not have internal state that needs to be manipulated or checked during testing. This can simplify the testing process and make tests more reliable.
 
 Overall, the choice between stateless and stateful widgets depends on the specific requirements of your application. For components that do not need to manage state, using stateless widgets can lead to simpler, more performant, and more maintainable code.
 
@@ -726,6 +726,39 @@ class MyApp extends StatelessWidget {
 ```
 
 In this example, MyApp is a StatelessWidget that returns a MaterialApp widget as its build method. The MaterialApp widget defines the basic structure of a Material Design app and sets the home property to a Scaffold widget, which provides a basic app layout structure. The runApp() function is then called with an instance of MyApp, which starts the app and displays the UI defined by MyApp.
+
+<h1> what if we do not call runapp </h1>
+
+If you do not call runApp() in your Flutter app, the app will not start, and nothing will be displayed on the screen. The runApp() function is essential because it initializes the Flutter framework and tells it which widget to use as the root of the widget tree. Without runApp(), the Flutter framework won't know how to start rendering the UI of your app.
+
+Here's an example of a Flutter app without runApp(), which will not work as expected:
+
+```
+import 'package:flutter/material.dart';
+
+void main() {
+  // runApp(MyApp()); // runApp is commented out, so the app won't start
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My App'),
+        ),
+        body: Center(
+          child: Text('Hello, World!'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+In this example, runApp() is commented out, so the app won't start, and the UI defined in MyApp will not be displayed. Always make sure to call runApp() with the root widget of your application to start the Flutter framework and display your app's UI.
 
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
