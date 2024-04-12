@@ -679,6 +679,54 @@ Overall, the choice between stateless and stateful widgets depends on the specif
 
 <p> For StatelessWidgets, the build method is called whenever the widget needs to be rendered or updated based on changes in the parent widget or other factors. This is essentially the "lifecycle" of a StatelessWidget – it's built once and then it stays the same until something causes it to be rebuilt. </p>
 
+
+<h1>what is main in flutter</h1>
+In Flutter, main() is the entry point for a Dart application, including Flutter apps. It's a top-level function that's called when the app is started. Inside main(), you typically call runApp() and pass it the root widget of your application.
+
+Here's a basic example of a main() function in a Flutter app:
+
+```
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+```
+
+In this example, main() calls runApp() and passes it MyApp(), which is the root widget of the application. runApp() sets up the app and starts the Flutter framework, which then builds the UI based on the widget hierarchy you've defined.
+
+<h1> what is runapp in flutter </h1>
+In Flutter, runApp() is a function that takes a widget and starts the Flutter framework's execution. It tells Flutter to run the provided widget as the root of your application's widget tree. This function is typically called from the main() function, which serves as the entry point of your Flutter app.
+
+Here's a basic example of how runApp() is used:
+
+```
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My App'),
+        ),
+        body: Center(
+          child: Text('Hello, World!'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+In this example, MyApp is a StatelessWidget that returns a MaterialApp widget as its build method. The MaterialApp widget defines the basic structure of a Material Design app and sets the home property to a Scaffold widget, which provides a basic app layout structure. The runApp() function is then called with an instance of MyApp, which starts the app and displays the UI defined by MyApp.
+
 <h1>What is Scaffold ? </h1>
 <h1>What is setState in flutter? </h1>
 <p>the setState() function notifies the framework that the internal state of this object has changed. </p>
