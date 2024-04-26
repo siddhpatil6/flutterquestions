@@ -1001,3 +1001,93 @@ Plugin Packages: A specialized Dart package that contains an API written in Dart
 <b>Push Notifications:</b> If the task involves notifying the user or triggering actions based on external events, you can use push notifications. When the user interacts with the notification, your app can handle background tasks related to the notification content.
 
 <b>Background APIs:</b> Leverage background APIs provided by specific Flutter plugins or native code. For example, if your app deals with location updates or sensor data in the background, use plugins like geolocator or implement native code for background location updates.
+
+<h1>what is diffenrence between changenotifier and valuenotifier? </h1>
+
+ValueNotifier is a special type of class that extends Changenotifier, which can hold a single value and notifies the widgets which are listening to it whenever its holding value gets change.
+
+ChangeNotifier is a class that provides change notification to its listeners. That means you can subscribe to a class that is extended or mixed in with ChangeNotifier and call its notifyListeners() method when there’s a change in that class. This call will notify the widgets that are subscribed to this class to rebuild.
+
+<h1></h1>
+
+ChangeNotifier is a class in Flutter that provides a way to manage the state of a widget. It is part of the provider package, which is a popular state management solution in Flutter. ChangeNotifier is used along with Provider to notify listeners when the state changes, allowing the UI to update accordingly.
+
+Here's a simple example to demonstrate how ChangeNotifier works:
+
+```
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CounterModel(),
+      child: MaterialApp(
+        home: MyApp(),
+      ),
+    ),
+  );
+}
+
+class CounterModel extends ChangeNotifier {
+  int _counter = 0;
+
+  int get counter => _counter;
+
+  void increment() {
+    _counter++;
+    notifyListeners();
+  }
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ChangeNotifier Example'),
+      ),
+      body: Center(
+        child: Consumer
+          <CounterModel>(
+            builder: (context, counterModel, _) {
+              return Text(
+                'Counter: ${counterModel.counter}',
+                style: TextStyle(fontSize: 24),
+              );
+            },
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Provider.of
+            <CounterModel>(context, listen: false).increment();
+        },
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+we've corrected the formatting and completion of the code snippet. The CounterModel class extends ChangeNotifier, and it has a private _counter variable and an increment method. The increment method increments the counter and notifies listeners using notifyListeners().
+
+In the main function, we wrap the app with a ChangeNotifierProvider that provides an instance of CounterModel to the widget tree.
+
+In the MyApp widget's build method, we use a Consumer widget to listen to changes in CounterModel. The builder function receives the CounterModel instance and rebuilds the Text widget whenever the counter changes.
+
+The FloatingActionButton uses Provider.of to access the CounterModel instance and calls its increment method when pressed, which updates the counter and triggers a UI update.
+
+
+<h1>what is use of build context in widget</h1>
+
+BuildContext in Flutter is a handle to the location of a widget in the widget tree. It's used for various purposes, including:
+
+<ul>
+<li>Building Widgets: </li>The build method of a widget receives a BuildContext as an argument. This context is used to build the widget and to refer to its location in the widget tree.
+<li>Finding Ancestor Widgets:  </li>You can use BuildContext to find ancestor widgets in the widget tree using methods like ancestorWidgetOfExactType or ancestorStateOfType.
+<li>Getting Theme Data: </li> BuildContext allows you to access the ThemeData of the nearest Theme widget in the widget tree.
+<li>Localization: </li> For internationalization (i18n), BuildContext is used to access localized strings using Localizations.of.
+<li>Navigation:  </li>BuildContext is used to navigate to other screens or routes using the Navigator class.
+<li>Managing State: </li> In stateful widgets, BuildContext is used to manage the state of the widget and its descendants.
+</ul>
