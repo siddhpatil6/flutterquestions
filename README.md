@@ -907,8 +907,81 @@ However, Dart can still perform asynchronous operations using features like futu
 
 In summary, Dart is considered single-threaded because it primarily relies on a single main thread for executing code, but it can still handle asynchronous operations without blocking the main thread.
 
+<h1> what is meterial app </h1>
+A convenience widget that wraps a number of widgets that are commonly required for Material Design applications
+
+```
+const MaterialApp(
+{Key key,
+GlobalKey<NavigatorState> navigatorKey,
+Widget home,
+Map<String, WidgetBuilder> routes: const <String, WidgetBuilder>{},
+String initialRoute,
+RouteFactory onGenerateRoute,
+InitialRouteListFactory onGenerateInitialRoutes,
+RouteFactory onUnknownRoute,
+List<NavigatorObserver> navigatorObservers: const <NavigatorObserver>[],
+TransitionBuilder builder,
+String title: '',
+GenerateAppTitle onGenerateTitle,
+Color color,
+ThemeData theme,
+ThemeData darkTheme,
+ThemeData highContrastTheme,
+ThemeData highContrastDarkTheme,
+ThemeMode themeMode: ThemeMode.system,
+Locale locale,
+Iterable<LocalizationsDelegate> localizationsDelegates,
+LocaleListResolutionCallback localeListResolutionCallback,
+LocaleResolutionCallback localeResolutionCallback,
+Iterable<Locale> supportedLocales: const <Locale>[Locale('en', 'US')],
+bool debugShowMaterialGrid: false,
+bool showPerformanceOverlay: false,
+bool checkerboardRasterCacheImages: false,
+bool checkerboardOffscreenLayers: false,
+bool showSemanticsDebugger: false,
+bool debugShowCheckedModeBanner: true,
+Map<LogicalKeySet, Intent> shortcuts,
+Map<Type, Action<Intent>> actions}
+)
+```
+<h4>Properties of MaterialApp widget: </h4>
+<ul>
+<li>action: This property takes in  Map<Type, Action<Intent>> as the object. It controls intent keys.</li>
+<li>backButtonDispatcher: It decided how to handle the back button.</li>
+<li>checkerboardRasterCacheImage:  This property takes in a boolean as the object. If set to true it turns on the checkerboarding of raster cache images.</li>
+<li>color: It controls the primary color used in the application.</li>
+<li>darkTheme: It provided theme data for the dark theme for the application.</li>
+<li>debugShowCheckedModeBanner: This property takes in a boolean as the object to decide whether to show the debug banner or not.</li>
+<li>debugShowMaterialGird: This property takes a boolean as the object. If set to true it paints a baseline grid material app.</li>
+<li>highContrastDarkTheme: It provided the theme data to use for the high contrast theme.</li>
+<li>home: This property takes in widget as the object to show on the default route of the app.</li>
+<li>initialRoute: This property takes in a string as the object to give the name of the first route in which the navigator is built.</li>
+<li>locale: It provides a locale for the MaterialApp.</li>
+<li>localizationsDelegate: This provides a delegate for the locales.</li>
+<li>navigatorObserver: It takes in GlobalKey<NavigatorState> as the object to generate a key when building a navigator.</li>
+<li>navigatorObserver: This property holds List<NavigatorObserver> as the object to create a list of observers for the navigator.</li>
+<li>onGenerateInitialRoutes: This property takes in InitialRouteListFactory typedef as the object to generate initial routes.</li>
+<li>onGeneratRoute: The onGenerateRoute takes in a RouteFactory as the object. It is used when the app is navigated to a named route.</li>
+<li>onGenerateTitle: This property takes in RouteFactory typedef as the object to generate a title string for the application if provided.</li>
+<li>onUnknownRoute: The onUnknownRoute takes in RouteFactory typedef as the object to provide a route in case of failure in other metheod.</li>
+<li>routeInformationParse: This property holds RouteInformationParser<T> as the object to the routing information from the routeInformationProvider into a generic data type.</li>
+<li>routeInformationProvider: This property takes in RouteInformationProvider class as the object. It is responsible for providing routing information.</li>
+<li>routeDelegate: This property takes in RouterDelegate<T>  as the object to configure a given widget.</li>
+<li>routes: The routes property takes in LogicalKeySet class as the object to control the app’s topmost level routing.</li>
+<li>shortcuts: This property takes in LogicalKeySet class as the object to decide the keyboard shortcut for the application.</li>
+<li>showPerformanceOverlay: The showPerformanceOverlay takes in a boolean value as the object to turn on or off performance overlay.</li>
+<li>showSemantisDebugger: This property takes in a boolean as the object. If set to true, it shows some accessible information.</li>
+<li>supportedLocales: The supportedLocales property keeps hold of the locals used in the app by taking in Iterable<E> class as the object.</li>
+<li>theme: This property takes in ThemeData class as the object to describe the theme for the MaterialApp.</li>
+<li>themeMode:  This property holds ThemeMode enum as the object to decide the theme for the material app.</li>
+<li>title: The title property takes in a string as the object to decide the one-line description of the app for the device.</li>
+
+</ul>
+
 <h1>what is websocket?</h1>
 <h1>what is block pattern?</h1>
+
 <h1>what is difference between package and plugin ?</h1>
 
 Plugins are nothing but a part of the Flutter Packages which is platofrm dependent
