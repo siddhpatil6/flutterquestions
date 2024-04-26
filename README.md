@@ -900,6 +900,19 @@ That said, isolates are commonly used for the following: <br>
 </ul>
 
 <h1>explain why dart is singlethreaded language?</h1>
+
+Dart is often described as single-threaded because of how it handles its main execution flow. In Dart, there is typically only one main thread of execution, which means that code is executed sequentially, one operation at a time. This is in contrast to multi-threaded languages, where multiple threads can run simultaneously, allowing for concurrent operations.
+
+However, Dart can still perform asynchronous operations using features like futures and async/await. These allow Dart programs to perform non-blocking operations, such as network requests or file I/O, without blocking the main thread. While these operations may run concurrently, they do not create additional threads. Instead, they leverage event loops and callbacks to manage the flow of execution, maintaining Dart's single-threaded nature.
+
+In summary, Dart is considered single-threaded because it primarily relies on a single main thread for executing code, but it can still handle asynchronous operations without blocking the main thread.
+
 <h1>what is websocket?</h1>
 <h1>what is block pattern?</h1>
 <h1>what is difference between package and plugin ?</h1>
+
+Plugins are nothing but a part of the Flutter Packages which is platofrm dependent
+
+Dart Packages: General packages written in Dart, for example the path package. Some of these might contain Flutter specific functionality and thus have a dependency on the Flutter framework, restricting their use to Flutter only, for example the fluro package.
+
+Plugin Packages: A specialized Dart package that contains an API written in Dart code combined with one or more platform-specific implementations. Plugin packages can be written for Android (using Kotlin or Java), iOS (using Swift or Objective-C), web, macOS, Windows, or Linux, or any combination thereof. A concrete example is the url_launcher plugin package
