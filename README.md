@@ -807,11 +807,98 @@ In this example, Isolate.spawn() is used to create a new isolate and start it wi
 
 
 <h1>What is Scaffold ? </h1>
+The Scaffold is a widget in Flutter used to implements the basic material design visual layout structure. It is quick enough to create a general-purpose mobile application and contains almost everything we need to create a functional and responsive Flutter apps. This widget is able to occupy the whole device screen. In other words, we can say that it is mainly responsible for creating a base to the app screen on which the child widgets hold on and render on the screen. It provides many widgets or APIs for showing Drawer, SnackBar, BottomNavigationBar, AppBar, FloatingActionButton, and many more.
+
+The Scaffold class is a shortcut to set up the look and design of our app that allows us not to build the individual visual elements manually. It saves our time to write more code for the look and feel of the app. The following are the constructor and properties of the Scaffold widget class.
+
+```
+const Scaffold({  
+  Key key,  
+  this.appBar,  
+  this.body,  
+  this.floatingActionButton,  
+  this.floatingActionButtonLocation,  
+  this.persistentFooterButtons,  
+  this.drawer,  
+  this.endDrawer,  
+  this.bottomNavigationBar,  
+  this.bottomSheet,  
+  this.floatingActionButtonAnimator,  
+  this.backgroundColor,  
+  this.resizeToAvoidBottomPadding = true,  
+  this.primary = true,  
+}) 
+```
+
 <h1>What is setState in flutter? </h1>
+What is a State Object in flutter?
+setState is called inside a State class. Let's understand this in detail.
+
+State is simply the information of a StatefulWidget. Every StatefulWidget has a State Object. This State Object keeps a track of the variables and functions that we define inside a StatefulWidget.
+
+State Object is actually managed by corresponding Element Object of the Widget, but for this blog, we will only focus on the Widget part. If you don't know what Element Object is, I'll encourage you to read about it. It's not required to know for this blog though.
+
+```
+ class MyWidget extends StatefulWidget { // immutable Widget
+  @override
+  _MyWidgetState createState() => _MyWidgetState();
+  // creating State Object of MyWidget
+}
+
+class _MyWidgetState extends State<MyWidget> { // State Object
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
+
 <p>the setState() function notifies the framework that the internal state of this object has changed. </p>
+
 <h1>what are overriden methods of webview?</h1>
+
+```
+controller = WebViewController()
+  ..setJavaScriptMode(JavaScriptMode.unrestricted)
+  ..setBackgroundColor(const Color(0x00000000))
+  ..setNavigationDelegate(
+    NavigationDelegate(
+      onProgress: (int progress) {
+        // Update loading bar.
+      },
+      onPageStarted: (String url) {},
+      onPageFinished: (String url) {},
+      onWebResourceError: (WebResourceError error) {},
+      onNavigationRequest: (NavigationRequest request) {
+        if (request.url.startsWith('https://www.youtube.com/')) {
+          return NavigationDecision.prevent;
+        }
+        return NavigationDecision.navigate;
+      },
+    ),
+  )
+  ..loadRequest(Uri.parse('https://flutter.dev'));
+```
+
 <h1>explain block pattern?</h1>
 <h1>what is isolate?</h1>
+There is only one hard rule for when you should use isolates, and that's when large computations are causing your Flutter application to experience UI jank. This jank happens when there is any computation that takes longer than Flutter's frame gap.
+![isolate](https://github.com/siddhpatil6/flutterquestions/assets/5618021/9d5df732-0c5f-43a2-8fe0-ea32750845fd)
+
+Any process could take longer to complete, depending on the implementation and the input data, making it impossible to create an exhaustive list of when you need to consider using isolates.
+
+That said, isolates are commonly used for the following: <br>
+
+<ul>
+<li> Reading data from a local database </li>
+<li> Sending push notifications </li>
+<li> Parsing and decoding large data files </li>
+<li> Processing or compressing photos, audio files, and video files </li>
+<li> Converting audio and video files </li>
+<li> When you need asynchronous support while using FFI </li>
+<li> Applying filtering to complex lists or filesystems </li>
+</ul>
+
 <h1>explain why dart is singlethreaded language?</h1>
 <h1>what is websocket?</h1>
 <h1>what is block pattern?</h1>
