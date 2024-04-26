@@ -1091,3 +1091,8 @@ BuildContext in Flutter is a handle to the location of a widget in the widget tr
 <li>Navigation:  </li>BuildContext is used to navigate to other screens or routes using the Navigator class.
 <li>Managing State: </li> In stateful widgets, BuildContext is used to manage the state of the widget and its descendants.
 </ul>
+
+<h1> Change notifier uses which design pattern ? </h1>
+ChangeNotifier in Flutter uses the Observer design pattern. <br>
+
+In the Observer pattern, there are two main components: the Subject and the Observer. The Subject is the object that holds some state and notifies the Observers when the state changes. The Observers are the objects that are interested in the state changes and register themselves with the Subject to receive notifications. <br>
