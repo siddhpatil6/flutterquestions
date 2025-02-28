@@ -1096,3 +1096,75 @@ BuildContext in Flutter is a handle to the location of a widget in the widget tr
 ChangeNotifier in Flutter uses the Observer design pattern. <br>
 
 In the Observer pattern, there are two main components: the Subject and the Observer. The Subject is the object that holds some state and notifies the Observers when the state changes. The Observers are the objects that are interested in the state changes and register themselves with the Subject to receive notifications. <br>
+
+<h2>1. How can we create a custom widget using Paint?</h2>
+<p>To create a custom widget using Paint, override the <code>paint</code> method of a <code>CustomPainter</code> class and use <code>Canvas</code> to draw your widget.</p>
+<pre><code>class MyCustomPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.blue
+      ..style = PaintingStyle.fill;
+    canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), paint);
+  }
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}</code></pre>
+
+<h2>2. What is the best way to manage different font sizes and other sizes?</h2>
+<p>Use the <code>MediaQuery</code> class for responsive design or define constants in a separate file to maintain consistency. Consider using packages like <code>flutter_screenutil</code> for scaling sizes based on screen dimensions.</p>
+
+<h2>3. Why is mixin required and why can’t we use class instead of mixin?</h2>
+<p>Mixins in Dart provide a way to reuse code in multiple class hierarchies without the limitations of single inheritance. A class can inherit from only one superclass, but a mixin can be used across different classes.</p>
+
+<h2>4. How does Flutter’s rendering engine work and how does it achieve high performance?</h2>
+<p>Flutter uses the Skia graphics engine for rendering. It employs a layered architecture where widgets build a widget tree, which is then converted into a render tree. The rendering engine handles the layout, compositing, and painting phases.</p>
+
+<h2>5. What are the differences between Stateless and Stateful Widgets?</h2>
+<p><strong>Stateless Widget:</strong> Immutable and cannot change once created. Use it for static UI parts.</p>
+<p><strong>Stateful Widget:</strong> Maintains mutable state that might change dynamically.</p>
+
+<h2>6. Strategies for optimizing the performance of a complex Flutter app</h2>
+<p>Minimize widget rebuilds using <code>const</code> constructors, <code>shouldRebuild</code> for AnimatedBuilder, and ValueListenableBuilder. Efficiently render lists with <code>ListView.builder</code> and avoid excessive overdraw.</p>
+
+<h2>7. How to approach state management in a large-scale Flutter app?</h2>
+<p>Consider using state management solutions like Provider, Riverpod, or Bloc based on complexity.</p>
+
+<h2>8. How do you approach designing the architecture of a new Flutter app?</h2>
+<p>Define app requirements, choose an architecture (e.g., MVVM, Clean Architecture), and separate concerns into UI, data, and business logic.</p>
+
+<h2>9. How to ensure code maintainability and scalability?</h2>
+<p>Follow best practices: modularize code, use consistent naming conventions, and write unit/integration tests.</p>
+
+<h2>10. What are your thoughts on testing Flutter applications?</h2>
+<p>Testing includes unit tests for individual functions, widget tests for UI interactions, and integration tests for end-to-end flows.</p>
+
+<h2>11. How do you approach debugging and troubleshooting?</h2>
+<p>Use Flutter DevTools for profiling, analyze logs with print statements, and debug using IDE tools.</p>
+
+<h2>12. How to check and avoid memory leaks?</h2>
+<p>Use Dart DevTools memory profiler, dispose of controllers properly, and avoid circular references.</p>
+
+<h2>13. How to effectively test state management logic?</h2>
+<p>Write unit tests for state management, mock dependencies, and verify state transitions.</p>
+
+<h2>14. How does MethodChannel and EventChannel work for native communication?</h2>
+<pre><code>static const platform = MethodChannel('com.example/mychannel');
+ 
+Future<void> _invokeNativeMethod() async {
+  try {
+    final result = await platform.invokeMethod('nativeMethod');
+  } on PlatformException catch (e) {
+    print("Failed to Invoke: '${e.message}'.");
+  }
+}</code></pre>
+
+<h2>15. How to display a large list of images efficiently?</h2>
+<pre><code>ListView.builder(
+  itemCount: imageUrls.length,
+  itemBuilder: (context, index) {
+    return Image.network(imageUrls[index]);
+  },
+);</code></pre>
+
+
